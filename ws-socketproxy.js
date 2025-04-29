@@ -1,17 +1,12 @@
+// Define the address and port of the TCP socket server
+const serverAddress = '192.168.1.8'; // Change this to your server's IP address
+const serverPort = 30003; // Change this to your server's port
+
 const net = require('net');
 const WebSocket = require('ws');
 const os = require('os');
 
-
-
 console.log('Local IP Address:', getLocalIP());
-
-
-// Define the address and port of the TCP socket server
-const serverAddress = '192.168.1.8'; // Change this to your server's IP address
-// const serverAddress = '192.168.1.123'; // Change this to your server's IP address
-// const serverAddress = '84.30.208.169'; // Change this to your server's IP address
-const serverPort = 30003; // Change this to your server's port
 
 // Create a new TCP socket client
 const tcpClient = new net.Socket();
