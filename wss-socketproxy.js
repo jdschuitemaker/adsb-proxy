@@ -1,3 +1,6 @@
+const serverAddress = '192.168.1.8';
+const serverPort = 30003;
+
 const net = require('net');
 const WebSocket = require('ws');
 const os = require('os');
@@ -13,8 +16,6 @@ const serverOptions = {
 };
 
 // TCP Client Setup (unchanged from original)
-const serverAddress = '192.168.1.8';
-const serverPort = 30003;
 const tcpClient = new net.Socket();
 
 tcpClient.connect(serverPort, serverAddress, () => {
